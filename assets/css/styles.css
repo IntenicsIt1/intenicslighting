@@ -419,16 +419,13 @@ nav__toggle {
   color: var(--first-color);
   box-shadow: 0 2px 8px hsla(0, 0%, 0%, 0.1);
 }
-
 .swiper-button-prev {
   left: calc(50% -3rem);
 }
 .swiper-button-next {
   right: calc(50% -3rem);
 }
-
 /*=============== CHOOSE ===============*/
-
 .choose__container {
   row-gap: 3rem;
 }
@@ -476,7 +473,6 @@ nav__toggle {
   writing-mode: vertical-lr;
   transform: rotate(180deg);
 }
-
 .choose__data {
   text-align: center;
 }
@@ -496,7 +492,7 @@ nav__toggle {
 }
 .choose__faq-icon {
   display: inline-flex;
-  padding: .25rem;
+  padding: 0.25rem;
   background: var(--third-gradient);
   border-radius: 5rem;
   color: var(--white-color);
@@ -515,10 +511,23 @@ I .choose__faq-icon i {
   height: 0;
   transition: height 0.3s ease;
 }
-
 /* Rotate icon */
+.faq-open .choose__faq-icon i {
+  transform: rotate(45deg);
+}
 /* Change color icon */
+.faq-open .choose__faq-icon {
+  background: var(--white-color);
+  color: var(--first-color-alt);
+  box-shadow: none;
+}
 /* Title color change */
+.faq-open .choose__faq-title {
+  background: var(--third-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 /*=============== FEATURES ===============*/
 /*=============== PRODUCTS ===============*/
 /*=============== JOIN ===============*/
