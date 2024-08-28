@@ -170,6 +170,8 @@ img {
   font-family: var(--second-font);
   font-weight: var(--font-medium);
   transition: color 0.4s;
+
+  font-size: 1.5rem;
 }
 .nav__logo span {
   background: var(--third-gradient);
@@ -182,7 +184,7 @@ img {
   display: flex;
   cursor: pointer;
 }
-nav__toggle {
+.nav__toggle {
   font-size: 1.25rem;
   color: var(--white-color);
   transition: color 0.45;
@@ -339,11 +341,16 @@ nav__toggle {
   z-index: -1;
 }
 .home__img {
-  display: block;
+  /* display: block;
   width: 220px;
   margin: 0 auto;
-  transform: translateY(-6px);
+  transform: translateY(-6px); */
+  display: block;
+  width: 147px;
+  margin: 0 auto;
+  transform: translateY(71px);
 }
+
 .home__blob-title {
   text-align: center;
   font-size: 3.5rem;
@@ -396,7 +403,8 @@ nav__toggle {
 }
 .popular__img {
   display: block;
-  width: 120px;
+  /* width: 120px; */
+  width: 137px;
   margin: 0 auto;
 }
 .popular__name {
