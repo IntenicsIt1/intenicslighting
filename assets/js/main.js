@@ -89,21 +89,37 @@ window.addEventListener("scroll", scrollUp);
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll("section[id]");
 const scrollActive = () => {
-  const scrollY = window.pageYOffset;  
+  const scrollY = window.pageYOffset;
   sections.forEach((current) => {
     const sectionHeight = current.offsetHeight;
     const sectionTop = current.offsetTop - 58;
     const sectionId = current.getAttribute("id");
-    const sectionsClass = document.querySelector(`.nav__menu a[href="#${sectionId}"]`);
-    if (sectionsClass) { // Check if sectionsClass is not null
+    const sectionsClass = document.querySelector(
+      `.nav__menu a[href="#${sectionId}"]`
+    );
+    if (sectionsClass) {
+      // Check if sectionsClass is not null
       if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
         sectionsClass.classList.add("active-link");
       } else {
-        sectionsClass.classList.remove("active-link"); 
+        sectionsClass.classList.remove("active-link");
       }
     }
   });
 };
-window.addEventListener('scroll', scrollActive);
+window.addEventListener("scroll", scrollActive);
 /*=============== DARK LIGHT THEME ===============*/
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+  origin: "top",
+  distance: "60px",
+  duration: 1500,
+  delay: 400,
+  // reset: true Animations repeat
+});
+sr.reveal(
+  `.home__content, .popular__container, .features__container, .products__container, .join__bg, .footer__container`
+);
+sr.reveal(`.home__image`, { origin: "bottom" });
+sr.reveal(`.choose__image, features__image`, { origin: "left" });
+sr.reveal(`.choose__content, features__content`, { origin: "right" });
