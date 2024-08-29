@@ -12,7 +12,6 @@
     hsl(15, 68%, 42%) 0%,
     hsl(20, 68%, 80%) 100%
   );
-  
   --second-gradient: linear-gradient(
     90deg,
     hsl(20, 72%, 57%) 0%,
@@ -24,13 +23,11 @@
     hsl(20, 62%, 60%) 100%
   );
    */
-
   --first-gradient: linear-gradient(
     90deg,
     hsl(216, 68%, 42%) 0%,
     hsl(202, 69%, 80%) 100%
   );
-
   --second-gradient: linear-gradient(
     90deg,
     hsl(216, 68%, 57%) 0%,
@@ -170,7 +167,6 @@ img {
   font-family: var(--second-font);
   font-weight: var(--font-medium);
   transition: color 0.4s;
-
   font-size: 1.5rem;
 }
 .nav__logo span {
@@ -350,7 +346,6 @@ img {
   margin: 0 auto;
   transform: translateY(71px);
 }
-
 .home__blob-title {
   text-align: center;
   font-size: 3.5rem;
@@ -598,7 +593,6 @@ I .choose__faq-icon i {
   filter: blur(12px);
   z-index: -1;
 }
-
 .features__img {
   position: relative;
   display: block;
@@ -639,7 +633,6 @@ I .choose__faq-icon i {
   );
   padding: 2rem 1.5rem;
 }
-
 .features__info-title {
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
@@ -664,7 +657,6 @@ I .choose__faq-icon i {
   gap: 2rem;
   justify-content: center;
 }
-
 .products__card {
   position: relative;
   width: 200px;
@@ -813,7 +805,6 @@ I .choose__faq-icon i {
   background-clip: text;
   color: transparent;
 }
-
 .footer__data {
   grid-template-columns: repeat(2, max-content);
   gap: 2.5rem 4rem;
@@ -872,7 +863,6 @@ I .choose__faq-icon i {
   border-radius: 0.5rem;
   background-color: hsl(0, 0%, 75%);
 }
-
 ::-webkit-scrollbar-thumb {
   border-radius: 0.5rem;
   background-color: hsl(0, 0%, 65%);
@@ -885,7 +875,6 @@ I .choose__faq-icon i {
   position: fixed;
   right: 1rem;
   bottom: -50%;
-
   background: var(--container-color);
   display: inline-flex;
   padding: 6px;
@@ -954,9 +943,14 @@ I .choose__faq-icon i {
     justify-content: space-between;
   }
 }
-
 @media screen and (min-width: 768px) {
-  .section__title {
+  .section__title,
+  .home__data,
+  .home__info,
+  .popular__data,
+  .choose__data,
+  .features__data,
+  .join__data {
     text-align: initial;
   }
   .home__container {
@@ -966,14 +960,61 @@ I .choose__faq-icon i {
   .home__image {
     order: -1;
   }
-  .home__bg{height: 110%;}
+  .home__bg {
+    height: 110%;
+  }
   .home__buttons,
-  .home__info{
+  .home__info {
     justify-content: inherit;
   }
-  .home__container {
+  .home__container,
+  .choose__container,
+  .features__container,
+  .join__bg {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
   }
+  .popular__description {
+    margin: initial;
+  }
+  .popular__content {
+    max-width: 700px;
+  }
+  .features__image {
+    order: 1;
+  }
+  .products__data .section__title {
+    text-align: center;
+  }
+  .join__bg {
+    padding: 0 3rem;
+  }
+  .join__form {
+    grid-template-columns: 1fr max-content;
+    column-gap: 0.5rem;
+    background-color: var(--body-color);
+    border-radius: 4rem;
+    padding-left: 1.5rem;
+  }
+  .join__input {
+    padding: 1rem 0;
+  }
+  .footer__group {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer__copy {
+    order: -1;
+  }
 }
 /* For large devices */
+@media screen and (min-width: 1024px) {
+  .nav{
+  column-gap: 4rem;
+  }
+  I
+  .nav__close,
+  .nav__toggle{
+  display: none;
+  }
+  }
