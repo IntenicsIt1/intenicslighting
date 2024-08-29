@@ -237,7 +237,7 @@ img {
   color: var(--title-color);
 }
 /* Active link */
-.active-link{
+.active-link {
   background: var(--third-gradient);
   -webkit-background-clip: text;
   background-clip: text;
@@ -635,7 +635,7 @@ I .choose__faq-icon i {
   background: linear-gradient(
     180deg,
     hsla(0, 0%, 86%, 0),
-    Thsla(0, 0%, 100%, 1)
+    hsla(0, 0%, 100%, 1)
   );
   padding: 2rem 1.5rem;
 }
@@ -672,7 +672,6 @@ I .choose__faq-icon i {
   background-color: var(--container-color);
   border-radius: 9rem 9rem 0 0;
   padding: 0.75rem 0.75rem 1rem;
-  margin-inline: 1rem;
   transition: box-shadow 0.4s;
 }
 .products__card:hover {
@@ -906,5 +905,75 @@ I .choose__faq-icon i {
 }
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
+@media screen and (max-width: 340px) {
+  .container {
+    margin-inline: 1rem;
+  }
+  .home__buttons {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+  }
+  .home__title {
+    font-size: 1.75rem;
+  }
+  .features__info {
+    grid-template-columns: 1fr;
+  }
+  .join__bg {
+    padding: 0.5rem 2rem 0.5rem;
+  }
+  .footer__data {
+    gap: 2rem;
+  }
+  .footer__terms {
+    column-gap: 0.5rem;
+  }
+}
 /* For medium devices */
+@media screen and (min-width: 576px) {
+  .popular__description,
+  .products__description {
+    width: 350px;
+    margin: 0 auto;
+  }
+  .choose__container,
+  .features__container,
+  .join__bg {
+    grid-template-columns: 360px;
+    justify-content: center;
+  }
+  .products__content {
+    grid-template-columns: repeat(2, max-content);
+  }
+  .join__bg {
+    justify-self: center;
+  }
+  .footer__content {
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section__title {
+    text-align: initial;
+  }
+  .home__container {
+    column-gap: 4rem;
+    padding-bottom: 2rem;
+  }
+  .home__image {
+    order: -1;
+  }
+  .home__bg{height: 110%;}
+  .home__buttons,
+  .home__info{
+    justify-content: inherit;
+  }
+  .home__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+}
 /* For large devices */
