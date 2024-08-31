@@ -1554,7 +1554,7 @@ footer:before {
 
 .banner-img-two {
     /* background-image: url("../img/home-two/banner-bg.jpg"); */
-    background-image: url("https://t3.ftcdn.net/jpg/00/86/45/54/360_F_86455472_eGuXaAeEHf8xOHGGByklYxt1K2N9Fqsj.jpg");
+    background-image: url("../img/home-one/bg.jpg");
 }
 
 .banner-img-two .banner-content {
@@ -2689,7 +2689,7 @@ footer:before {
 /*-- Banner --*/
 
 .banner-img-three {
-    background-image: url("../img/home-three/banner-bg.jpg");
+    background-image: url("../img/home-one/bg.jpg");
 }
 
 .banner-img-three .cmn-btn {
